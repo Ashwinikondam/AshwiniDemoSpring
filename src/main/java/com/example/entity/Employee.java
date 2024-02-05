@@ -2,13 +2,16 @@ package com.example.entity;
 
 //import javax.persistence.*;
 
-//@Entity
-//@Table(name = "employee")
+import jakarta.persistence.*;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "employee")
 public class Employee {
-    //@Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer emp_id;
-    private String emp_name;
+    private String name;
     private double salary;
     private String gender;
 
@@ -29,11 +32,11 @@ public class Employee {
     }
 
     public String getEmp_name() {
-        return emp_name;
+        return name;
     }
 
     public void setEmp_name(String emp_name) {
-        this.emp_name = emp_name;
+        this.name = name;
     }
 
     public double getSalary() {
